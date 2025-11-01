@@ -1,0 +1,39 @@
+<main class="min-h-screen bg-white text-black font-sans antialiased">
+  <div class="container mx-auto px-6 py-12 md:py-24">
+
+    <!-- Header Section -->
+    <header class="text-center mb-12 md:mb-20">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-4">
+        Monochrome World
+      </h1>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto">
+        An exploration of simplicity and elegance through a purely black and white lens.
+      </p>
+    </header>
+
+    <!-- Features Section -->
+    <section>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        @for (feature of features(); track feature.title) {
+          <div class="group border border-black p-8 transition-all duration-300 ease-in-out hover:bg-black hover:text-white">
+            <div class="mb-4">
+              <span class="block font-mono text-3xl font-bold border-2 border-black rounded-full h-16 w-16 flex items-center justify-center group-hover:border-white transition-colors duration-300">
+                {{ feature.icon }}
+              </span>
+            </div>
+            <h2 class="text-2xl font-bold mb-3">{{ feature.title }}</h2>
+            <p class="text-base opacity-90 leading-relaxed">{{ feature.description }}</p>
+          </div>
+        }
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="text-center mt-12 md:mt-24 pt-8 border-t border-black">
+      <p class="text-sm">
+        Designed with &lt;3 by a world-class senior frontend Angular engineer.
+      </p>
+    </footer>
+
+  </div>
+</main>
